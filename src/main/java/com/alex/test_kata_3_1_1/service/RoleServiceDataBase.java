@@ -37,10 +37,4 @@ public class RoleServiceDataBase implements RoleService{
         return roleRepository.findAll();
     }
 
-    @Transactional
-    @Override
-    public Role getById(Long id) {
-        return roleRepository.findById(id).orElse(null);
-    }
-
 }
