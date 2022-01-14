@@ -3,8 +3,6 @@ package com.alex.test_kata_3_1_1.controller;
 
 import com.alex.test_kata_3_1_1.model.User;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -22,7 +20,7 @@ public class UsersController {
         User user = (User) authentication.getPrincipal();
         log.info("Info about user: "+user.toString());
         modelMap.addAttribute("authorize_user", user);
-        return "user2";
+        return "user";
     }
 
 }
