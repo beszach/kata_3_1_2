@@ -1,29 +1,15 @@
-package com.alex.test_kata_3_1_1.config;
+package com.alex.kata_3_1_2.config;
 
-import com.alex.test_kata_3_1_1.model.Role;
-import com.alex.test_kata_3_1_1.model.User;
-import com.alex.test_kata_3_1_1.service.RoleService;
-import com.alex.test_kata_3_1_1.service.UserService;
-import lombok.extern.log4j.Log4j;
+import com.alex.kata_3_1_2.model.Role;
+import com.alex.kata_3_1_2.model.User;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.util.List;
 
 @Component
 @Transactional

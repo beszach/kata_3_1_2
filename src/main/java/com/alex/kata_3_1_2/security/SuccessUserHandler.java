@@ -1,4 +1,4 @@
-package com.alex.test_kata_3_1_1.security;
+package com.alex.kata_3_1_2.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

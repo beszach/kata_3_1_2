@@ -1,10 +1,10 @@
-package com.alex.test_kata_3_1_1;
+package com.alex.kata_3_1_2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TestKata311ApplicationTests {
+class Kata311ApplicationTests {
 
 	@Test
 	void contextLoads() {

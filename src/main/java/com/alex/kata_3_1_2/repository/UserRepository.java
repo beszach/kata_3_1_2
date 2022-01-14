@@ -1,6 +1,6 @@
-package com.alex.test_kata_3_1_1.repository;
+package com.alex.kata_3_1_2.repository;
 
-import com.alex.test_kata_3_1_1.model.User;
+import com.alex.kata_3_1_2.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

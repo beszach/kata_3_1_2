@@ -1,7 +1,7 @@
-package com.alex.test_kata_3_1_1.controller;
+package com.alex.kata_3_1_2.controller;
 
 
-import com.alex.test_kata_3_1_1.model.User;
+import com.alex.kata_3_1_2.model.User;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

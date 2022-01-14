@@ -1,13 +1,13 @@
-package com.alex.test_kata_3_1_1;
+package com.alex.kata_3_1_2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestKata311Application {
+public class Kata311Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestKata311Application.class, args);
+		SpringApplication.run(Kata311Application.class, args);
 	}
 
 }

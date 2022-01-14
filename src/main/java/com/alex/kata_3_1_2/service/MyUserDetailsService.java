@@ -1,4 +1,4 @@
-package com.alex.test_kata_3_1_1.service;
+package com.alex.kata_3_1_2.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,6 +1,6 @@
-package com.alex.test_kata_3_1_1.service;
+package com.alex.kata_3_1_2.service;
 
-import com.alex.test_kata_3_1_1.model.Role;
+import com.alex.kata_3_1_2.model.Role;
 
 import java.util.List;
 

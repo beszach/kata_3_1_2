@@ -1,4 +1,4 @@
-package com.alex.test_kata_3_1_1.model;
+package com.alex.kata_3_1_2.model;
 
 import lombok.Getter;
 import lombok.NonNull;

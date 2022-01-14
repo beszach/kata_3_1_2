@@ -1,7 +1,7 @@
-package com.alex.test_kata_3_1_1.service;
+package com.alex.kata_3_1_2.service;
 
-import com.alex.test_kata_3_1_1.model.User;
-import com.alex.test_kata_3_1_1.repository.UserRepository;
+import com.alex.kata_3_1_2.model.User;
+import com.alex.kata_3_1_2.repository.UserRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
