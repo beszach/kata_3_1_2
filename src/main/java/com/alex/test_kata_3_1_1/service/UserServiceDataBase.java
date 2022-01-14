@@ -56,11 +56,6 @@ public class UserServiceDataBase implements UserService {
     }
 
     @Override
-    public User getById(int id) {
-        return userRepository.findById((long) id).orElse(null);
-    }
-
-    @Override
     public User findByEmail(String email) {
         return userRepository.findByEmail(email);
     }

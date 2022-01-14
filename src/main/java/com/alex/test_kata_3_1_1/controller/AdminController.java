@@ -32,11 +32,23 @@ public class AdminController {
     }
 
 
-    @PatchMapping("/userId{id}")
-    public String edit(@PathVariable("id") int id, @ModelAttribute("user") User updatedUser){
+    @PutMapping("/")
+    public String edit(@ModelAttribute("user") User updatedUser){
         userService.update(updatedUser);
         return "redirect:/admin";
     }
+
+    @GetMapping("/userId{id}")
+    public String infoAboutUser(@PathVariable("id") long id, ModelMap modelMap){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User authUser = (User) authentication.getPrincipal();
+        log.info("Info about user: "+authUser.toString());
+        User user = userService.getById(id);
+        modelMap.addAttribute("authorize_user", authUser);
+        modelMap.addAttribute("user", user);
+        return "info_about_user";
+    }
+
 
     @DeleteMapping("/userId{id}")
     public String delete(@PathVariable("id") int id){
@@ -56,6 +68,5 @@ public class AdminController {
         modelMap.addAttribute("users", userService.getAll());
         return "admin_users";
     }
-
 
 }

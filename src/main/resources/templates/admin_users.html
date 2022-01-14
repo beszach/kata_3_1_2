@@ -217,7 +217,7 @@
 
 <!--Modal EDIT-->
 <div th:each="user : ${users}" th:attr="id=${'editModal' + user.id}" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form  class="modal-dialog modal-dialog-centered" th:object="${edit_user}"  th:method="PATCH" th:action="@{/admin/userId{id}(id = ${user.getId()})}">
+    <form  class="modal-dialog modal-dialog-centered" th:object="${edit_user}"  th:method="PUT" th:action="@{/admin/}">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit user</h5>
@@ -226,7 +226,7 @@
             <div class="modal-body">
                 <div class="container-edit">
                     <label for="id_edit" class="form-label">ID</label>
-                    <input type="text" class="form-control" th:placeholder="${user.id}" th:field="${edit_user.id}" id="id_edit" disabled>
+                    <input type="text" class="form-control" th:value="${user.id}" th:id="id" th:name="id" id="id_edit" readonly>
                     <label for="Firstname_edit" class="form-label">Firstname</label>
                     <input type="text" class="form-control" id="Firstname_edit" th:value="${user.firstName}" th:name="firstName" th:id="firstName" required>
                     <label for="Lastname_edit" class="form-label">Lastname</label>
@@ -266,15 +266,15 @@
             <div class="modal-body">
                 <div class="container-edit">
                     <label for="id_delete" class="form-label">ID</label>
-                    <input type="text" class="form-control" th:placeholder="${user.id}" id="id_delete" disabled>
+                    <input type="text" class="form-control" th:placeholder="${user.id}" id="id_delete" readonly>
                     <label for="Firstname_delete" class="form-label">Firstname</label>
-                    <input type="text" class="form-control" id="Firstname_delete" th:placeholder="${user.firstName}" disabled>
+                    <input type="text" class="form-control" id="Firstname_delete" th:placeholder="${user.firstName}" readonly>
                     <label for="Lastname_delete" class="form-label">Lastname</label>
-                    <input type="text" class="form-control" th:placeholder="${user.lastName}" id="Lastname_delete" disabled>
+                    <input type="text" class="form-control" th:placeholder="${user.lastName}" id="Lastname_delete" readonly>
                     <label for="age_delete" class="form-label">Age</label>
-                    <input type="number" class="form-control" th:placeholder="${user.age}" id="age_delete" disabled>
+                    <input type="number" class="form-control" th:placeholder="${user.age}" id="age_delete" readonly>
                     <label for="Email_delete" class="form-label">Email</label>
-                    <input type="text" class="form-control" th:placeholder="${user.email}" id="Email_delete" disabled>
+                    <input type="text" class="form-control" th:placeholder="${user.email}" id="Email_delete" readonly>
                     <label for="roles_delete" class="form-label">Role</label>
                     <select id="roles_delete" size="2" multiple="multiple" disabled>
                         <option th:each="role : ${roles}"
