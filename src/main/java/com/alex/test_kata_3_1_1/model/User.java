@@ -61,6 +61,10 @@ public class User implements UserDetails {
       this.email = email;
    }
 
+   public User getthis(){
+      return this;
+   }
+
    public void addRole(Role role){
       roleList.add(role);
    }

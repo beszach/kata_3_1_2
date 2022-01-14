@@ -60,6 +60,7 @@ public class InitialInitConfig {
         admin.setAge(1);
         admin.setPassword(passwordEncoder.encode("admin"));
         admin.addRole(role1);
+        admin.addRole(role2);
         entityManager.persist(admin);
 
         User user1 = new User("Alex", "Alex", "email1@mail.ru");

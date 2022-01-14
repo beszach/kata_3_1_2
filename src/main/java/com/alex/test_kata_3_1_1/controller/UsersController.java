@@ -21,8 +21,8 @@ public class UsersController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = (User) authentication.getPrincipal();
         log.info("Info about user: "+user.toString());
-        modelMap.addAttribute("user", user);
-        return "user";
+        modelMap.addAttribute("authorize_user", user);
+        return "user2";
     }
 
 }

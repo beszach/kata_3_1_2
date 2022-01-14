@@ -42,4 +42,5 @@ public class RoleServiceDataBase implements RoleService{
     public Role getById(Long id) {
         return roleRepository.findById(id).orElse(null);
     }
+
 }

@@ -29,11 +29,11 @@ public class AdminController {
         this.roleService = roleService;
     }
 
-    @GetMapping("")
-    public String vievForAll(ModelMap modelMap){
-        modelMap.addAttribute("users", userService.getAll());
-        return "admin_users";
-    }
+//    @GetMapping("")
+//    public String vievForAll(ModelMap modelMap){
+//        modelMap.addAttribute("users", userService.getAll());
+//        return "admin_users";
+//    }
 
     @GetMapping("/add_user")
     public String addUser(ModelMap modelMap){
@@ -74,13 +74,16 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @GetMapping("/table")
+//    @GetMapping("/table")
+    @GetMapping("")
     public String getTable(ModelMap modelMap){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = (User) authentication.getPrincipal();
         log.info("Info about user: "+user.toString());
-        modelMap.addAttribute("new_user", new User());
         modelMap.addAttribute("authorize_user", user);
+        modelMap.addAttribute("new_user", new User());
+        modelMap.addAttribute("edit_user", new User());
+        modelMap.addAttribute("userService", userService);
         modelMap.addAttribute("roles", roleService.getAll());
         modelMap.addAttribute("users", userService.getAll());
         return "admin_users_2";
