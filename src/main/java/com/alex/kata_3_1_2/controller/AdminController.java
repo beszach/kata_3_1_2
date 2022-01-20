@@ -4,6 +4,7 @@ import com.alex.kata_3_1_2.model.User;
 import com.alex.kata_3_1_2.service.RoleService;
 import com.alex.kata_3_1_2.service.UserService;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @Log4j2
 @RequestMapping("/admin")
+@PreAuthorize("hasRole('ROLE_ADMIN')")
 public class AdminController {
 
     private final UserService userService;
