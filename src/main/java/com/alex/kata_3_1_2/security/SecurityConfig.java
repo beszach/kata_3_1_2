@@ -47,9 +47,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").authenticated()
                 .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .and().formLogin().successHandler(successUserHandler)
-                .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-               .permitAll();
+                .and().formLogin().loginPage("/login").successHandler(successUserHandler)
+                .and().logout()
+                .permitAll();
+
+//        http.authorizeRequests()
+//                .antMatchers("/").authenticated()
+//                .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
+//                .antMatchers("/admin/**").hasRole("ADMIN")
+//                .and().formLogin().successHandler(successUserHandler)
+//                .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//               .permitAll();
     }
 
     @Bean("passwordEncoder")
